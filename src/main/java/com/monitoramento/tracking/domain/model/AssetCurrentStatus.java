@@ -5,7 +5,6 @@ import com.monitoramento.tracking.domain.model.enums.AssetStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.locationtech.jts.geom.Point;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -28,8 +27,9 @@ public class AssetCurrentStatus {
     @JoinColumn(name = "last_location_id")
     private LocationDataPoint lastLocation;
 
-    @Column(columnDefinition = "geometry(Point,4326)")
-    private Point lastCoordinates;
+    private double lastLatitude;
+
+    private double lastLongitude;
 
     private OffsetDateTime lastUpdated;
 
