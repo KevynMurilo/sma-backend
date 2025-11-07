@@ -1,4 +1,8 @@
 package com.monitoramento.user.api.dto;
 
-public class AuthResponseDTO {
+public record AuthResponseDTO(
+        String token,
+        String refreshToken,
+        UserResponseDTO user
+) {
 }

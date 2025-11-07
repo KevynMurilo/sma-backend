@@ -1,4 +1,4 @@
-package com.monitoramento.user.infraestructure.persistence;
+package com.monitoramento.user.infrastructure.persistence;
 
 import com.monitoramento.user.domain.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

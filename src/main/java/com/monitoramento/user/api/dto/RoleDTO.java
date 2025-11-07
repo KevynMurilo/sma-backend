@@ -1,4 +1,7 @@
 package com.monitoramento.user.api.dto;
 
-public class RoleDTO {
+public record RoleDTO(
+        Long id,
+        String name
+) {
 }

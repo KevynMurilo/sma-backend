@@ -1,4 +1,12 @@
 package com.monitoramento.user.api.dto;
 
-public class AuthRequestDTO {
+import jakarta.validation.constraints.NotBlank;
+
+public record AuthRequestDTO(
+        @NotBlank
+        String login,
+
+        @NotBlank
+        String password
+) {
 }
