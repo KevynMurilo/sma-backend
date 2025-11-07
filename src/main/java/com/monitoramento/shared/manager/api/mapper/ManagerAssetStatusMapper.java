@@ -1,6 +1,6 @@
-package com.monitoramento.shared.mapper;
+package com.monitoramento.shared.manager.api.mapper;
 
-import com.monitoramento.shared.dto.ManagerAssetStatusDTO;
+import com.monitoramento.shared.manager.api.dto.ManagerAssetStatusDTO;
 import com.monitoramento.tracking.domain.model.AssetCurrentStatus;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

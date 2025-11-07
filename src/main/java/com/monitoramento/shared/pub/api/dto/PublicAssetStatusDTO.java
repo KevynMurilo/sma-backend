@@ -1,4 +1,4 @@
-package com.monitoramento.shared.dto;
+package com.monitoramento.shared.pub.api.dto;
 
 import com.monitoramento.asset.domain.model.enums.AssetType;
 import com.monitoramento.tracking.domain.model.enums.AssetStatus;

@@ -1,9 +1,9 @@
-package com.monitoramento.organization.domain.useCase.fleet;
+package com.monitoramento.shared.manager.domain.useCase;
 
 import com.monitoramento.shared.dto.ApiResponseDTO;
-import com.monitoramento.shared.dto.ManagerAssetStatusDTO;
+import com.monitoramento.shared.manager.api.dto.ManagerAssetStatusDTO;
 import com.monitoramento.shared.dto.PagedResponseDTO;
-import com.monitoramento.shared.mapper.ManagerAssetStatusMapper;
+import com.monitoramento.shared.manager.api.mapper.ManagerAssetStatusMapper;
 import com.monitoramento.tracking.domain.model.AssetCurrentStatus;
 import com.monitoramento.tracking.infrastructure.persistence.AssetCurrentStatusRepository;
 import com.monitoramento.user.domain.service.UserDetailsImpl;

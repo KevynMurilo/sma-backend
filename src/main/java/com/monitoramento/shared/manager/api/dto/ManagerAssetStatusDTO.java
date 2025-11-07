@@ -1,4 +1,4 @@
-package com.monitoramento.shared.dto;
+package com.monitoramento.shared.manager.api.dto;
 
 import com.monitoramento.tracking.domain.model.enums.AssetStatus;
 import lombok.Getter;
