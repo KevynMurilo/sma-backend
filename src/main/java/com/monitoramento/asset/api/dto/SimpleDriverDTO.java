@@ -1,4 +1,9 @@
 package com.monitoramento.asset.api.dto;
 
-public class SimpleDriverDTO {
+import java.util.UUID;
+
+public record SimpleDriverDTO(
+        UUID id,
+        String fullName
+) {
 }

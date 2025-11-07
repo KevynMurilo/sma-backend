@@ -25,5 +25,7 @@ public class VehicleDetails {
 
     private String model;
     private String make;
+
+    @Column(name = "\"year\"")
     private int year;
 }

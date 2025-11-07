@@ -1,4 +1,9 @@
 package com.monitoramento.asset.api.dto;
 
-public class VehicleDetailsDTO {
+public record VehicleDetailsDTO(
+        String licensePlate,
+        String model,
+        String make,
+        int year
+) {
 }
