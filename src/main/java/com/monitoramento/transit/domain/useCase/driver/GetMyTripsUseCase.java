@@ -1,4 +1,4 @@
-package com.monitoramento.domain.useCase.driver;
+package com.monitoramento.transit.domain.useCase.driver;
 
 import com.monitoramento.shared.dto.ApiResponseDTO;
 import com.monitoramento.transit.api.dto.TripResponseDTO;
@@ -10,6 +10,7 @@ import com.monitoramento.user.domain.service.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.util.UUID;
 
 import java.time.LocalDate;
 import java.util.Arrays;

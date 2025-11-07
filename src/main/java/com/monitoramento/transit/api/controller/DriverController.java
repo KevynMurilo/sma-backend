@@ -1,8 +1,8 @@
-package com.monitoramento.api.controller.driver;
+package com.monitoramento.transit.api.controller;
 
-import com.monitoramento.domain.useCase.driver.EndTripUseCase;
-import com.monitoramento.domain.useCase.driver.GetMyTripsUseCase;
-import com.monitoramento.domain.useCase.driver.StartTripUseCase;
+import com.monitoramento.transit.domain.useCase.driver.EndTripUseCase;
+import com.monitoramento.transit.domain.useCase.driver.GetMyTripsUseCase;
+import com.monitoramento.transit.domain.useCase.driver.StartTripUseCase;
 import com.monitoramento.shared.dto.ApiResponseDTO;
 import com.monitoramento.transit.api.dto.TripResponseDTO;
 import com.monitoramento.user.domain.service.UserDetailsImpl;

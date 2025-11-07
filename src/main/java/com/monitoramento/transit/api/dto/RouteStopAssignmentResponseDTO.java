@@ -1,4 +1,8 @@
 package com.monitoramento.transit.api.dto;
 
-public class RouteStopAssignmentResponseDTO {
+public record RouteStopAssignmentResponseDTO(
+        Long id,
+        StopResponseDTO stop,
+        int stopOrder
+) {
 }

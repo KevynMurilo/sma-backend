@@ -1,4 +1,9 @@
 package com.monitoramento.transit.api.dto;
 
-public class SimpleScheduleDepartureDTO {
-}
+import java.time.LocalTime;
+
+public record SimpleScheduleDepartureDTO(
+        Long id,
+        LocalTime departureTime,
+        SimpleRouteDTO route
+) {}

@@ -1,4 +1,8 @@
-package com.monitoramento.transit.domain.model;
+package com.monitoramento.transit.domain.model.enums;
 
-public class TripStatus {
+public enum TripStatus {
+    SCHEDULED,
+    IN_PROGRESS,
+    COMPLETED,
+    CANCELLED
 }

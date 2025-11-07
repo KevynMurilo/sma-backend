@@ -1,4 +1,4 @@
-package com.monitoramento.domain.useCase.driver;
+package com.monitoramento.transit.domain.useCase.driver;
 
 import com.monitoramento.shared.dto.ApiResponseDTO;
 import com.monitoramento.transit.api.dto.TripResponseDTO;

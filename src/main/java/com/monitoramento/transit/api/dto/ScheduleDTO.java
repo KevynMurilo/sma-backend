@@ -1,4 +1,13 @@
 package com.monitoramento.transit.api.dto;
 
-public class ScheduleDTO {
+import com.monitoramento.transit.domain.model.enums.DayOfWeekProfile;
+import jakarta.validation.constraints.NotNull;
+import java.util.UUID;
+
+public record ScheduleDTO(
+        @NotNull
+        UUID routeId,
+        @NotNull
+        DayOfWeekProfile dayProfile
+) {
 }
