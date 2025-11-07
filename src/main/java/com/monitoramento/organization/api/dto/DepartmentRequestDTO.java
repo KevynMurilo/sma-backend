@@ -1,3 +1,9 @@
 package com.monitoramento.organization.api.dto;
 
-public record DepartmentDTO(String name, String code) { }
+import jakarta.validation.constraints.NotBlank;
+
+public record DepartmentRequestDTO(
+        @NotBlank String name,
+        @NotBlank String code
+) {
+}
