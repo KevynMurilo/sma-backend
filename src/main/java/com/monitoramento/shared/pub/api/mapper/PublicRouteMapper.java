@@ -6,6 +6,7 @@ import com.monitoramento.transit.domain.model.Route;
 import com.monitoramento.transit.domain.model.RouteStopAssignment;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,16 +16,17 @@ public class PublicRouteMapper {
     public PublicRouteDTO toPublicDTO(Route route) {
         List<PublicStopDTO> stops = route.getStops() != null
                 ? route.getStops().stream()
-                    .map(this::toPublicStopDTO)
-                    .collect(Collectors.toList())
-                : List.of();
+                .map(this::toPublicStopDTO)
+                .collect(Collectors.toList())
+                : Collections.emptyList();
 
         return new PublicRouteDTO(
                 route.getId(),
                 route.getRouteName(),
                 route.getRouteDescription(),
                 route.getType(),
-                stops
+                stops,
+                false
         );
     }
 

@@ -9,10 +9,12 @@ import com.monitoramento.shared.pub.domain.useCase.GetPublicLiveAssetsUseCase;
 import com.monitoramento.shared.pub.domain.useCase.GetPublicRouteByIdUseCase;
 import com.monitoramento.shared.pub.domain.useCase.GetPublicRouteSchedulesUseCase;
 import com.monitoramento.shared.pub.domain.useCase.ListPublicRoutesUseCase;
+import com.monitoramento.user.domain.service.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,15 +40,19 @@ public class PublicController {
 
     @GetMapping("/routes")
     public ResponseEntity<ApiResponseDTO<PagedResponseDTO<PublicRouteDTO>>> listPublicRoutes(
-            @PageableDefault(size = 20) Pageable pageable) {
+            @PageableDefault(size = 20) Pageable pageable,
+            @AuthenticationPrincipal UserDetailsImpl userDetails) {
 
-        ApiResponseDTO<PagedResponseDTO<PublicRouteDTO>> response = listPublicRoutesUseCase.execute(pageable);
+        ApiResponseDTO<PagedResponseDTO<PublicRouteDTO>> response = listPublicRoutesUseCase.execute(pageable, userDetails);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
 
     @GetMapping("/routes/{id}")
-    public ResponseEntity<ApiResponseDTO<PublicRouteDTO>> getPublicRouteById(@PathVariable UUID id) {
-        ApiResponseDTO<PublicRouteDTO> response = getPublicRouteByIdUseCase.execute(id);
+    public ResponseEntity<ApiResponseDTO<PublicRouteDTO>> getPublicRouteById(
+            @PathVariable UUID id,
+            @AuthenticationPrincipal UserDetailsImpl userDetails) {
+
+        ApiResponseDTO<PublicRouteDTO> response = getPublicRouteByIdUseCase.execute(id, userDetails);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
 

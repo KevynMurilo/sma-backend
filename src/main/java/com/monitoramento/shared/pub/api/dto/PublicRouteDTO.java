@@ -10,6 +10,7 @@ public record PublicRouteDTO(
         String routeName,
         String routeDescription,
         RouteType type,
-        List<PublicStopDTO> stops
+        List<PublicStopDTO> stops,
+        boolean isFavorite
 ) {
 }
